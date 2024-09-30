@@ -66,8 +66,12 @@ function App() {
     };
 
     const handleKeyDown = (e) => {
-      // Disable F12, Ctrl+Shift+I, Ctrl+U, etc.
-      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+      // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+C
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) || // Ctrl+Shift+I or Ctrl+Shift+C
+        (e.ctrlKey && e.key === 'U')
+      ) {
         e.preventDefault();
       }
     };
