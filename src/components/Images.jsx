@@ -424,7 +424,7 @@ const Images = () => {
           </Swiper>
 
           <div className="absolute mt-[159px] sm:mt-[257px] md:mt-[84px] lg:mt-[200px] xl:mt-[3.25%] flex flex-col xl:flex-row items-center justify-between xl:px-[6%] w-full">
-            <h1 className="text-white font-[Roboto_Flex_Thin] font-[700] tracking-tighter text-[10px] xl:text-xs">©️ DECATHLON 2024 ALL RIGHT RESERVED</h1>
+            <h1 className="text-white font-[Roboto_Flex_Thin] font-[700] tracking-tighter text-[10px] xl:text-xs">©️ Mursid 2024 || ALL RIGHT RESERVED</h1>
             <h1 className="text-white font-[Roboto_Flex_Thin] font-[700] tracking-tighter text-[10px] xl:text-xs"><a className="underline hover:text-[#dadada]" href="#">LEGAL MENTIONS</a> • WEBSITE BY <a className="underline hover:text-[#dadada]" href="#">INDEX.STUDIO</a></h1>
           </div>
         </div>
