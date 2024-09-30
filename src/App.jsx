@@ -59,6 +59,29 @@ function App() {
     }
   }, [loadedImages, totalImages]);
 
+  // Prevent right-click and keyboard shortcuts
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault(); // Disable right-click menu
+    };
+
+    const handleKeyDown = (e) => {
+      // Disable F12, Ctrl+Shift+I, Ctrl+U, etc.
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   // Display loader while images are loading
   if (loading) {
     return <Loader />;
